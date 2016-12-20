@@ -24,6 +24,12 @@ Partial Class frm_init
     Private Sub InitializeComponent()
         Me.lbl_proftext = New System.Windows.Forms.Label()
         Me.gb_stats = New System.Windows.Forms.GroupBox()
+        Me.lbl_ram = New System.Windows.Forms.Label()
+        Me.lbl_moddir = New System.Windows.Forms.Label()
+        Me.lbl_isforge = New System.Windows.Forms.Label()
+        Me.lbl_type = New System.Windows.Forms.Label()
+        Me.lbl_mcver = New System.Windows.Forms.Label()
+        Me.lbl_profile = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lbl_forgetext = New System.Windows.Forms.Label()
@@ -35,12 +41,7 @@ Partial Class frm_init
         Me.btn_down = New System.Windows.Forms.Button()
         Me.gb_mods = New System.Windows.Forms.GroupBox()
         Me.lb_mods = New System.Windows.Forms.ListBox()
-        Me.lbl_profile = New System.Windows.Forms.Label()
-        Me.lbl_mcver = New System.Windows.Forms.Label()
-        Me.lbl_type = New System.Windows.Forms.Label()
-        Me.lbl_isforge = New System.Windows.Forms.Label()
-        Me.lbl_moddir = New System.Windows.Forms.Label()
-        Me.lbl_ram = New System.Windows.Forms.Label()
+        Me.cb_profilesel = New System.Windows.Forms.ComboBox()
         Me.gb_stats.SuspendLayout()
         Me.gb_mods.SuspendLayout()
         Me.SuspendLayout()
@@ -74,6 +75,60 @@ Partial Class frm_init
         Me.gb_stats.TabIndex = 1
         Me.gb_stats.TabStop = False
         Me.gb_stats.Text = "Status"
+        '
+        'lbl_ram
+        '
+        Me.lbl_ram.AutoSize = True
+        Me.lbl_ram.Location = New System.Drawing.Point(6, 263)
+        Me.lbl_ram.Name = "lbl_ram"
+        Me.lbl_ram.Size = New System.Drawing.Size(83, 13)
+        Me.lbl_ram.TabIndex = 11
+        Me.lbl_ram.Text = "%loadedprofile%"
+        '
+        'lbl_moddir
+        '
+        Me.lbl_moddir.AutoSize = True
+        Me.lbl_moddir.Location = New System.Drawing.Point(6, 214)
+        Me.lbl_moddir.Name = "lbl_moddir"
+        Me.lbl_moddir.Size = New System.Drawing.Size(83, 13)
+        Me.lbl_moddir.TabIndex = 10
+        Me.lbl_moddir.Text = "%loadedprofile%"
+        '
+        'lbl_isforge
+        '
+        Me.lbl_isforge.AutoSize = True
+        Me.lbl_isforge.Location = New System.Drawing.Point(4, 170)
+        Me.lbl_isforge.Name = "lbl_isforge"
+        Me.lbl_isforge.Size = New System.Drawing.Size(83, 13)
+        Me.lbl_isforge.TabIndex = 9
+        Me.lbl_isforge.Text = "%loadedprofile%"
+        '
+        'lbl_type
+        '
+        Me.lbl_type.AutoSize = True
+        Me.lbl_type.Location = New System.Drawing.Point(6, 125)
+        Me.lbl_type.Name = "lbl_type"
+        Me.lbl_type.Size = New System.Drawing.Size(83, 13)
+        Me.lbl_type.TabIndex = 8
+        Me.lbl_type.Text = "%loadedprofile%"
+        '
+        'lbl_mcver
+        '
+        Me.lbl_mcver.AutoSize = True
+        Me.lbl_mcver.Location = New System.Drawing.Point(6, 78)
+        Me.lbl_mcver.Name = "lbl_mcver"
+        Me.lbl_mcver.Size = New System.Drawing.Size(83, 13)
+        Me.lbl_mcver.TabIndex = 7
+        Me.lbl_mcver.Text = "%loadedprofile%"
+        '
+        'lbl_profile
+        '
+        Me.lbl_profile.AutoSize = True
+        Me.lbl_profile.Location = New System.Drawing.Point(6, 35)
+        Me.lbl_profile.Name = "lbl_profile"
+        Me.lbl_profile.Size = New System.Drawing.Size(83, 13)
+        Me.lbl_profile.TabIndex = 6
+        Me.lbl_profile.Text = "%loadedprofile%"
         '
         'Label5
         '
@@ -176,59 +231,14 @@ Partial Class frm_init
         Me.lb_mods.Size = New System.Drawing.Size(347, 199)
         Me.lb_mods.TabIndex = 0
         '
-        'lbl_profile
+        'cb_profilesel
         '
-        Me.lbl_profile.AutoSize = True
-        Me.lbl_profile.Location = New System.Drawing.Point(6, 35)
-        Me.lbl_profile.Name = "lbl_profile"
-        Me.lbl_profile.Size = New System.Drawing.Size(83, 13)
-        Me.lbl_profile.TabIndex = 6
-        Me.lbl_profile.Text = "%loadedprofile%"
-        '
-        'lbl_mcver
-        '
-        Me.lbl_mcver.AutoSize = True
-        Me.lbl_mcver.Location = New System.Drawing.Point(6, 78)
-        Me.lbl_mcver.Name = "lbl_mcver"
-        Me.lbl_mcver.Size = New System.Drawing.Size(83, 13)
-        Me.lbl_mcver.TabIndex = 7
-        Me.lbl_mcver.Text = "%loadedprofile%"
-        '
-        'lbl_type
-        '
-        Me.lbl_type.AutoSize = True
-        Me.lbl_type.Location = New System.Drawing.Point(6, 125)
-        Me.lbl_type.Name = "lbl_type"
-        Me.lbl_type.Size = New System.Drawing.Size(83, 13)
-        Me.lbl_type.TabIndex = 8
-        Me.lbl_type.Text = "%loadedprofile%"
-        '
-        'lbl_isforge
-        '
-        Me.lbl_isforge.AutoSize = True
-        Me.lbl_isforge.Location = New System.Drawing.Point(4, 170)
-        Me.lbl_isforge.Name = "lbl_isforge"
-        Me.lbl_isforge.Size = New System.Drawing.Size(83, 13)
-        Me.lbl_isforge.TabIndex = 9
-        Me.lbl_isforge.Text = "%loadedprofile%"
-        '
-        'lbl_moddir
-        '
-        Me.lbl_moddir.AutoSize = True
-        Me.lbl_moddir.Location = New System.Drawing.Point(6, 214)
-        Me.lbl_moddir.Name = "lbl_moddir"
-        Me.lbl_moddir.Size = New System.Drawing.Size(83, 13)
-        Me.lbl_moddir.TabIndex = 10
-        Me.lbl_moddir.Text = "%loadedprofile%"
-        '
-        'lbl_ram
-        '
-        Me.lbl_ram.AutoSize = True
-        Me.lbl_ram.Location = New System.Drawing.Point(6, 263)
-        Me.lbl_ram.Name = "lbl_ram"
-        Me.lbl_ram.Size = New System.Drawing.Size(83, 13)
-        Me.lbl_ram.TabIndex = 11
-        Me.lbl_ram.Text = "%loadedprofile%"
+        Me.cb_profilesel.FormattingEnabled = True
+        Me.cb_profilesel.Location = New System.Drawing.Point(14, 39)
+        Me.cb_profilesel.Name = "cb_profilesel"
+        Me.cb_profilesel.Size = New System.Drawing.Size(177, 21)
+        Me.cb_profilesel.TabIndex = 7
+        Me.cb_profilesel.Text = "Select Profile"
         '
         'frm_init
         '
@@ -236,6 +246,7 @@ Partial Class frm_init
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(591, 373)
+        Me.Controls.Add(Me.cb_profilesel)
         Me.Controls.Add(Me.gb_mods)
         Me.Controls.Add(Me.btn_down)
         Me.Controls.Add(Me.btn_mods)
@@ -272,4 +283,5 @@ Partial Class frm_init
     Friend WithEvents lbl_type As Label
     Friend WithEvents lbl_mcver As Label
     Friend WithEvents lbl_profile As Label
+    Friend WithEvents cb_profilesel As ComboBox
 End Class
